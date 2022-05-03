@@ -1,0 +1,478 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 transitional//EN" "http://www.w3.org/tr/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="keywords" content="CLIMS">
+    <meta name="description" content="CLIMS">
+    <!--<link href="CSS/bootstrap.min.css" media="all" rel="stylesheet">-->
+    <link href="./files/main.css" media="all" rel="stylesheet">
+    <title>A Novel Transient Wrinkle Detection Algorithm and Its Application for Expression Synthesis</title>
+    <style>
+        font.italic {
+            font-style: italic;
+        }
+
+        .isDisabled {
+            pointer-events: none;
+            cursor: default;
+            text-decoration: none;
+            color: black;
+        }
+
+        .lightfont {
+            font-size: medium;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <section id="headinformation" class="sectionwhite">
+        <table id="tbInformation" width="100%">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <h1>A Novel Transient Wrinkle Detection Algorithm and Its Application for Expression Synthesis
+                        </h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <a href="https://wcxie.github.io/Weicheng-Xie/" target="_blank">Weicheng Xie</a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="https://scholar.google.com/citations?user=AZ_y9HgAAAAJ&hl=en" target="_blank">Linlin
+                            Shen</a>
+                        &nbsp;&nbsp;&nbsp;
+                        Jianmin Jiang
+
+                        <p align="center">
+                            <small>
+                                The ComputerVision Institute, School of Computer Science and Software Engineering, and
+                                the Shenzhen Key Laboratory of Spatial Information Smart Sensing and Services, Shenzhen
+                                University, Shenzhen 518060, China
+                                &nbsp;&nbsp;&nbsp;<br>
+                                the School of Computer Science, University of Nottingham, Nottingham NG8 1BB, U.K.
+                                &nbsp;&nbsp;&nbsp;<br>
+                                the Research Institute for FutureMedia Computing, Shenzhen University, Shenzhen 518060,
+                                China
+                            </small>
+                        </p>
+
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <img src="./files/main.png" border="12" height="380">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="Abstract" class="sectionwhite">
+        <h3> Abstract </h3>
+        <font size="normal">
+            <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+                <tbody>
+                    <tr>
+                        <td align="left">
+                            &nbsp;&nbsp;&nbsp;&nbsp; Because facial wrinkle is a representative feature of facial
+                            expression, automatic wrinkle detection has been an important and challenging topic for
+                            expression simulation, recognition, and animation. Recently, most works about wrinkle
+                            detection have focused on permanent wrinkles (e.g., age wrinkles), which are usually linear
+                            shapes, whereas the detection of transient wrinkles (e.g., expression wrinkles) has not been
+                            sufficiently studied because of their shape diversity and complexity. In this work, a novel
+                            algorithm for automatic detection of transient wrinkles with linear, fixed, and chaotic
+                            shapes is proposed, which largely consists of edge pair matching,
+                            active-appearance-modelbased wrinkle structure location, and support-vector-machinebased
+                            wrinkle classification. The proposed wrinkle detector is applied for expression synthesis
+                            and an improved Poisson wrinkle mapping approach is proposed. Experimental results
+                            illustrate the competitiveness of the proposed wrinkle detector in detecting different
+                            transient wrinkles. Compared with stateof- the-art algorithms, the proposed approach yields
+                            complete and accurate wrinkle centers. The expression synthesized by the improved wrinkle
+                            mapping is also much more realistic.
+                            </br>
+
+                            </p>
+                            </b>
+                            </br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </font>
+    </section>
+
+    <section id="Paper" class="sectionwhite">
+        <h3> Paper</h3>
+        <font size="normal">
+            <table cellpadding=0 cellspacing=0 width="100%" class="sectionwhite">
+                <tr>
+                    <td align="left">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/7579191" target="_blank">
+                            <img src="papers/TWDA_Page1.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/7579191" target="_blank">
+                            <img src="papers/TWDA_Page2.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/7579191" target="_blank">
+                            <img src="papers/TWDA_Page3.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/7579191" target="_blank">
+                            <img src="papers/TWDA_Page4.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/7579191" target="_blank">
+                            <img src="papers/TWDA_Page5.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/7579191" target="_blank">
+                            <img src="papers/TWDA_Page6.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/7579191" target="_blank">
+                            <img src="papers/TWDA_Page7.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/7579191" target="_blank">
+                            <img src="papers/TWDA_Page8.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/7579191" target="_blank">
+                            <img src="papers/TWDA_Page9.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/7579191" target="_blank">
+                            <img src="papers/TWDA_Page10.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/7579191" target="_blank">
+                            <img src="papers/TWDA_Page11.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/7579191" target="_blank">
+                            <img src="papers/TWDA_Page12.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/7579191" target="_blank">
+                            <img src="papers/TWDA_Page13.png" style="border:1px solid black" width="15.5%">
+                        </a>
+
+                        <a href="https://ieeexplore.ieee.org/abstract/document/75791918" target="_blank">
+                            IEEE
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </font>
+    </section>
+
+    <hr />
+
+    <section id="TMM2016" class="sectionwhite">
+        <tr>
+            <h2 style="text-align: center;">Visualization</h2>
+
+        </tr>
+        <h3>Overview of the work</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/1.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Framework of transient wrinkle detection</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/2.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Illustration of wrinkle edge pair matching</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/3.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>(a) and (b) are two example faces from wrinkle database. (c) shows two fixed regions for AAM training and
+            learning.</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/4.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Illustration of wrinkle structure adjustment</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/5.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Illustration of non-wrinkle region generation</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/6.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Comparison of generated wrinkles with the initial (a) and improved (b) Poisson wrinkle mappings.</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/7.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Detected wrinkles on the forehead regions</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/8.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Forehead wrinkle location for 7th–11th frames of temporal expression sequence and the corresponding
+            quantitative metric values. </h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/9.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Forehead wrinkle location on older adults with different conditions</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/10.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Comparison of different operators for locating blurry wrinkle centerlines</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/11.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Location results of threewrinkle detectors for the nasolabial wrinkles</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/12.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Wrinkles verified by SVM</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/13.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Detection results of six categories of wrinkles with relatively fixed shape</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/14.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>First row demonstrates the chin regions labeled with green polygons. The preceding and subsequent three
+            images of the 2nd row present the correctly detected wrinkle and non-wrinkle regions, respectively. </h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/15.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Quantitative metric values for chin wrinkle and non-wrinkle regions</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/16.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Wrong classification of chaotic chin wrinkles</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/17.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Hybrid of chaotic and linear shape wrinkle detectors</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/18.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Smile, laugh, and sad expressions synthesized by the proposed algorithm</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/19.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Comparison of three wrinkle mapping algorithms for expression synthesis</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/20.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+
+    </section>
+
+    <section id="Citation" class="sectionwhite">
+        <h3> Citation</h3>
+    </section>
+    <section id="Citation" width="60%" class="sectiongray">
+        <table cellpadding=3 cellspacing=0 width="60%" class="sectiongray">
+            <tr>
+                <td>
+                    <pre><code>
+@article{xie2016novel,
+    title={A novel transient wrinkle detection algorithm and its application for expression synthesis},
+    author={Xie, Weicheng and Shen, Linlin and Jiang, Jianmin},
+    journal={IEEE Transactions on Multimedia},
+    volume={19},
+    number={2},
+    pages={279--292},
+    year={2016},
+    publisher={IEEE}
+}
+            </td></tr>
+            </code></pre>
+        </table>
+    </section>
+
+
+    <br>访问次数:
+    <a href="https://www.easycounter.com/">
+        <img src="https://www.easycounter.com/counter.php?clims" border="0" alt="stats counter"></a>
+    <p></p>
+    <div class="page-header"> </div>
+    <div class="container span11">
+        <a href="https://clustrmaps.com/site/1bnro" title="Visit tracker"><img
+                src="//www.clustrmaps.com/map_v2.png?d=untOnR3Bc54Gi5oXc-hl3EGaWbwuvi_sOJi6_8HogZA&cl=ffffff" /></a>
+    </div>
+
+    </div>
+    <div class="page-header">
+    </div>
+
+</body>
+
+</html>
