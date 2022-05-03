@@ -1,0 +1,354 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 transitional//EN" "http://www.w3.org/tr/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="keywords" content="CLIMS">
+    <meta name="description" content="CLIMS">
+    <!--<link href="CSS/bootstrap.min.css" media="all" rel="stylesheet">-->
+    <link href="./files/main.css" media="all" rel="stylesheet">
+    <title>Sparse deep feature learning for facial expression recognition</title>
+    <style>
+        font.italic {
+            font-style: italic;
+        }
+
+        .isDisabled {
+            pointer-events: none;
+            cursor: default;
+            text-decoration: none;
+            color: black;
+        }
+
+        .lightfont {
+            font-size: medium;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <section id="headinformation" class="sectionwhite">
+        <table id="tbInformation" width="100%">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <h1>Sparse deep feature learning for facial expression recognition</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <a href="https://wcxie.github.io/Weicheng-Xie/" target="_blank">Weicheng Xie</a>
+                        &nbsp;&nbsp;&nbsp;
+                        Xi Jia
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="https://scholar.google.com/citations?user=AZ_y9HgAAAAJ&hl=en" target="_blank">Linlin
+                            Shen</a>
+                        &nbsp;&nbsp;&nbsp;
+                        Meng Yang
+                        &nbsp;&nbsp;&nbsp;
+
+                        <p align="center">
+                            <small>
+                                Computer Vision Institute, School of Computer Science & Software Engineering, Shenzhen
+                                University, China
+                                &nbsp;&nbsp;&nbsp;<br>
+                                Guangdong Key Laboratory of Intelligent Information Processing, China
+                                &nbsp;&nbsp;&nbsp;<br>
+                                Shenzhen Institute of Artificial Intelligence and Robotics for Society, Sun Yat-sen
+                                University, China
+                                &nbsp;&nbsp;&nbsp;<br>
+                                School of Data and Computer Science, Sun Yat-sen University, China
+                                &nbsp;&nbsp;&nbsp;
+                            </small>
+                        </p>
+
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <img src="./files/main.png" border="12" height="380">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="Abstract" class="sectionwhite">
+        <h3> Abstract </h3>
+        <font size="normal">
+            <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+                <tbody>
+                    <tr>
+                        <td align="left">
+                            &nbsp;&nbsp;&nbsp;&nbsp; While weight sparseness-based regularization has been used to learn
+                            better deep features for image recognition problems, it introduced a large number of
+                            variables for optimization and can easily con- verge to a local optimum. The L2-norm
+                            regularization proposed for face recognition reduces the impact of the noisy information,
+                            while expression information is also suppressed during the regularization. A feature
+                            sparseness-based regularization that learns deep features with better generalization
+                            capability is proposed in this paper. The regularization is integrated into the loss
+                            function and optimized with a deep metric learning framework. Through a toy example, it is
+                            showed that a simple network with the proposed sparseness outperforms the one with the
+                            L2-norm regularization. Furthermore, the proposed approach achieved competitive performances
+                            on four publicly available datasets, i.e., FER2013, CK + , Oulu-CASIA and MMI. The
+                            state-of-the-art cross-database performances also justify the generalization capability of
+                            the proposed approach
+                            </br>
+
+                            </p>
+                            </b>
+                            </br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </font>
+    </section>
+
+    <section id="Paper" class="sectionwhite">
+        <h3> Paper</h3>
+        <font size="normal">
+            <table cellpadding=0 cellspacing=0 width="100%" class="sectionwhite">
+                <tr>
+                    <td align="left">
+                        <a href="https://doi.org/10.1016/j.patcog.2019.106966" target="_blank">
+                            <img src="papers/SDFL_Page1.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2019.106966" target="_blank">
+                            <img src="papers/SDFL_Page2.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2019.106966" target="_blank">
+                            <img src="papers/SDFL_Page3.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2019.106966" target="_blank">
+                            <img src="papers/SDFL_Page4.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2019.106966" target="_blank">
+                            <img src="papers/SDFL_Page5.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2019.106966" target="_blank">
+                            <img src="papers/SDFL_Page6.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2019.106966" target="_blank">
+                            <img src="papers/SDFL_Page7.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2019.106966" target="_blank">
+                            <img src="papers/SDFL_Page8.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2019.106966" target="_blank">
+                            <img src="papers/SDFL_Page9.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2019.106966" target="_blank">
+                            <img src="papers/SDFL_Page10.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2019.106966" target="_blank">
+                            <img src="papers/SDFL_Page11.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2019.106966" target="_blank">
+                            <img src="papers/SDFL_Page12.png" style="border:1px solid black" width="15.5%">
+                        </a>
+
+                        <a href="https://doi.org/10.1016/j.patcog.2019.106966" target="_blank">
+                            Elsevier
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </font>
+    </section>
+
+    <hr />
+
+    <section id="PR 2019" class="sectionwhite">
+        <tr>
+            <h2 style="text-align: center;">Visualization</h2>
+
+        </tr>
+
+
+        <h3>The ‘disgust’ expression of different persons in different databases</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/1.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>The data preprocessing</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/2.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>The hidden unit, weight and the proposed feature sparseness</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/3.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>The structures of two networks</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/4.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>The fine tuning of models for different databases</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/5.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Example images of FER2013, CK + , Oulu-CASIA and MMI</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/6.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>The comparison of the L2-norm regularization and the L2 sparseness</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/7.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>The average ROC curves and the corresponding values of AUC</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/8.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>The validation and testing accuracies</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/9.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+
+    </section>
+
+    <section id="Citation" class="sectionwhite">
+        <h3> Citation</h3>
+    </section>
+    <section id="Citation" width="60%" class="sectiongray">
+        <table cellpadding=3 cellspacing=0 width="60%" class="sectiongray">
+            <tr>
+                <td>
+                    <pre><code>
+@article{xie2019sparse,
+    title={Sparse deep feature learning for facial expression recognition},
+    author={Xie, Weicheng and Jia, Xi and Shen, Linlin and Yang, Meng},
+    journal={Pattern Recognition},
+    volume={96},
+    pages={106966},
+    year={2019},
+    publisher={Elsevier}
+    }                                                
+            </td></tr>
+            </code></pre>
+        </table>
+    </section>
+
+
+    <br>访问次数:
+    <a href="https://www.easycounter.com/">
+        <img src="https://www.easycounter.com/counter.php?meteordream,test" border="0" alt="stats counter"></a>
+    <p></p>
+    <div class="page-header"> </div>
+    <div class="container span11">
+        <a href="https://clustrmaps.com/site/1bo7d" title="Visit tracker"><img
+                src="//www.clustrmaps.com/map_v2.png?d=G-2R2nJwJbig_69BkhXn13qTx48Xz3U_BLRBT8WmA0o&cl=ffffff" /></a>
+    </div>
+
+    </div>
+    <div class="page-header">
+    </div>
+
+</body>
+
+</html>

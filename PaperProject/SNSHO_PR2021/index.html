@@ -1,0 +1,349 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 transitional//EN" "http://www.w3.org/tr/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="keywords" content="CLIMS">
+    <meta name="description" content="CLIMS">
+    <!--<link href="CSS/bootstrap.min.css" media="all" rel="stylesheet">-->
+    <link href="./files/main.css" media="all" rel="stylesheet">
+    <title>Surrogate network-based sparseness hyper-parameter optimization for deep expression recognition</title>
+    <style>
+        font.italic {
+            font-style: italic;
+        }
+
+        .isDisabled {
+            pointer-events: none;
+            cursor: default;
+            text-decoration: none;
+            color: black;
+        }
+
+        .lightfont {
+            font-size: medium;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <section id="headinformation" class="sectionwhite">
+        <table id="tbInformation" width="100%">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <h1>Surrogate network-based sparseness hyper-parameter optimization for deep expression
+                            recognition</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <a href="https://wcxie.github.io/Weicheng-Xie/" target="_blank">Weicheng Xie</a>
+                        &nbsp;&nbsp;&nbsp;
+                        Wenting Chen
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="https://scholar.google.com/citations?user=AZ_y9HgAAAAJ&hl=en" target="_blank">Linlin
+                            Shen</a> a
+                        &nbsp;&nbsp;&nbsp;
+                        Jinming Duan
+                        &nbsp;&nbsp;&nbsp;
+                        Meng Yang
+                        &nbsp;&nbsp;&nbsp;
+
+                        <p align="center">
+                            <small>
+                                School of Computer Science & Software Engineering, Shenzhen University, PR China
+                                &nbsp;&nbsp;&nbsp;<br>
+                                Shenzhen Institute of Artificial Intelligence and Robotics for Society, PR China
+                                &nbsp;&nbsp;&nbsp;<br>
+                                Guangdong Key Laboratory of Intelligent Information Processing, Shenzhen University, PR
+                                China
+                                &nbsp;&nbsp;&nbsp;<br>
+                                School of Computer Science, University of Birmingham, UK, School of Data and Computer
+                                Science, Sun Yat-sen University, PR China
+                            </small>
+                        </p>
+
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <img src="./files/main.png" border="12" height="380">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="Abstract" class="sectionwhite">
+        <h3> Abstract </h3>
+        <font size="normal">
+            <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+                <tbody>
+                    <tr>
+                        <td align="left">
+                            &nbsp;&nbsp;&nbsp;&nbsp; For facial expression recognition, the sparseness constraints of
+                            the features or weights can improve the generalization ability of a deep network. However,
+                            the optimization of the hyper-parameters in fusing dif- ferent sparseness strategies demands
+                            much computation, when the traditional gradient-based algorithms are used. In this work, an
+                            iterative framework with surrogate network is proposed for the optimization of
+                            hyper-parameters in fusing different sparseness strategies. In each iteration, a network
+                            with signifi- cantly smaller model complexity is fitted to the original large network based
+                            on four Euclidean losses, where the hyper-parameters are optimized with heuristic
+                            optimizers. Since the surrogate network uses the same deep metrics and embeds the same
+                            hyper-parameters as the original network, the optimized hyper-parameters are then used for
+                            the training of the original deep network in the next iteration. While the performance of
+                            the proposed algorithm is justified with a tiny model, i.e. LeNet on the FER2013 database,
+                            our approach achieved competitive performances on six publicly available expression
+                            datasets, i.e., FER2013, CK+, Oulu-CASIA, MMI, AFEW and AffectNet.
+                            </br>
+
+                            </p>
+                            </b>
+                            </br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </font>
+    </section>
+
+    <section id="Paper" class="sectionwhite">
+        <h3> Paper</h3>
+        <font size="normal">
+            <table cellpadding=0 cellspacing=0 width="100%" class="sectionwhite">
+                <tr>
+                    <td align="left">
+                        <a href="https://doi.org/10.1016/j.patcog.2020.107701" target="_blank">
+                            <img src="papers/SNSHO_Page1.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2020.107701" target="_blank">
+                            <img src="papers/SNSHO_Page2.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2020.107701" target="_blank">
+                            <img src="papers/SNSHO_Page3.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2020.107701" target="_blank">
+                            <img src="papers/SNSHO_Page4.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2020.107701" target="_blank">
+                            <img src="papers/SNSHO_Page5.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2020.107701" target="_blank">
+                            <img src="papers/SNSHO_Page6.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2020.107701" target="_blank">
+                            <img src="papers/SNSHO_Page7.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2020.107701" target="_blank">
+                            <img src="papers/SNSHO_Page8.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2020.107701" target="_blank">
+                            <img src="papers/SNSHO_Page9.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2020.107701" target="_blank">
+                            <img src="papers/SNSHO_Page10.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2020.107701" target="_blank">
+                            <img src="papers/SNSHO_Page11.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2020.107701" target="_blank">
+                            <img src="papers/SNSHO_Page12.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://doi.org/10.1016/j.patcog.2020.107701" target="_blank">
+                            <img src="papers/SNSHO_Page13.png" style="border:1px solid black" width="15.5%">
+                        </a>
+
+                        <a href="https://arxiv.org/abs/2203.02668" target="_blank">
+                            Elsevier
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </font>
+    </section>
+
+    <hr />
+
+    <section id="PR2021" class="sectionwhite">
+        <tr>
+            <h2 style="text-align: center;">Visualization</h2>
+
+        </tr>
+
+        <h3>The iterative framework of the proposed hyper-parameter optimization</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/1.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Four sparseness strategies and their hyper-parameters</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/2.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>The configuration of ‘original+surrogate’ network</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/3.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Example images of the FER2013, CK+, Oulu-CASIA, MMI, AFEW and AffectNet databases</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/4.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>The evolution curves of the hyper-parameters and the testing accuracies</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/5.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>The evolution curves of the eight hyper-parameters of LeNet optimized with PSO for the FER2013 database</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/6.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>The evolution curves of the validation and testing accuracies</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/7.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>The confusion matrices (%) of the proposed algorithm</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/8.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+
+
+    </section>
+
+    <section id="Citation" class="sectionwhite">
+        <h3> Citation</h3>
+    </section>
+    <section id="Citation" width="60%" class="sectiongray">
+        <table cellpadding=3 cellspacing=0 width="60%" class="sectiongray">
+            <tr>
+                <td>
+                    <pre><code>
+@article{xie2021surrogate,
+    title={Surrogate network-based sparseness hyper-parameter optimization for deep expression recognition},
+    author={Xie, Weicheng and Chen, Wenting and Shen, Linlin and Duan, Jinming and Yang, Meng},
+    journal={Pattern Recognition},
+    volume={111},
+    pages={107701},
+    year={2021},
+    publisher={Elsevier}
+}                          
+            </td></tr>
+            </code></pre>
+        </table>
+    </section>
+
+
+    <br>访问次数:
+    <a href="https://www.easycounter.com/">
+        <img src="https://www.easycounter.com/counter.php?clims" border="0" alt="stats counter"></a>
+    <p></p>
+    <div class="page-header"> </div>
+    <div class="container span11">
+        <a href="https://clustrmaps.com/site/1bnro" title="Visit tracker"><img
+                src="//www.clustrmaps.com/map_v2.png?d=untOnR3Bc54Gi5oXc-hl3EGaWbwuvi_sOJi6_8HogZA&cl=ffffff" /></a>
+    </div>
+
+    </div>
+    <div class="page-header">
+    </div>
+
+</body>
+
+</html>
