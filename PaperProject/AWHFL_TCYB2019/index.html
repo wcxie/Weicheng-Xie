@@ -1,0 +1,403 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 transitional//EN" "http://www.w3.org/tr/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="keywords" content="CLIMS">
+    <meta name="description" content="CLIMS">
+    <!--<link href="CSS/bootstrap.min.css" media="all" rel="stylesheet">-->
+    <link href="./files/main.css" media="all" rel="stylesheet">
+    <title>Adaptive Weighting of Handcrafted Feature Losses for Facial Expression Recognition</title>
+    <style>
+        font.italic {
+            font-style: italic;
+        }
+
+        .isDisabled {
+            pointer-events: none;
+            cursor: default;
+            text-decoration: none;
+            color: black;
+        }
+
+        .lightfont {
+            font-size: medium;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <section id="headinformation" class="sectionwhite">
+        <table id="tbInformation" width="100%">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <h1>Adaptive Weighting of Handcrafted Feature Losses for Facial Expression Recognition</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <a href="https://wcxie.github.io/Weicheng-Xie/" target="_blank">Weicheng Xie</a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="https://scholar.google.com/citations?user=AZ_y9HgAAAAJ&hl=en" target="_blank">Linlin
+                            Shen</a>
+                        &nbsp;&nbsp;&nbsp;
+                        Jinming Duan
+
+                        <p align="center">
+                            <small>
+                                Computer Vision Institute, School of Computer Science and Software Engineering,
+                                Guangdong Key Laboratory of Intelligent Information Processing, Shenzhen University,
+                                Shenzhen 518060, China
+                                &nbsp;&nbsp;&nbsp;<br>
+                                Shenzhen Institute of Artificial Intelligence and Robotics for Society, Shenzhen 518060,
+                                China
+                                &nbsp;&nbsp;&nbsp;<br>
+                                the School of Computer Science, University of Birmingham, Birmingham B15 2TT, U.K.
+                            </small>
+                        </p>
+
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <img src="./files/main.png" border="12" height="380">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="Abstract" class="sectionwhite">
+        <h3> Abstract </h3>
+        <font size="normal">
+            <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+                <tbody>
+                    <tr>
+                        <td align="left">
+                            &nbsp;&nbsp;&nbsp;&nbsp; Due to the importance of facial expressions in human–machine
+                            interaction, a number of handcrafted features and deep neural networks have been developed
+                            for facial expression recognition. While a few studies have shown the similarity between the
+                            handcrafted features and the features learned by deep network, a new feature loss is
+                            proposed to use feature bias constraint of handcrafted and deep features to guide the deep
+                            feature learning during the early training of network. The feature maps learned with and
+                            without the proposed feature loss for a toy network suggest that our approach can fully
+                            explore the complementarity between handcrafted features and deep features. Based on the
+                            feature loss, a general framework for embedding the traditional feature information into
+                            deep network training was developed and tested using the FER2013, CK+, Oulu-CASIA, and MMI
+                            datasets. Moreover, adaptive loss weighting strategies are proposed to balance the influence
+                            of different losses for different expression databases. The experimental results show that
+                            the proposed feature loss with adaptive weighting achieves much better accuracy than the
+                            original handcrafted feature and the network trained without using our feature loss.
+                            Meanwhile, the feature loss with adaptive weighting can provide complementary information to
+                            compensate for the deficiency of a single feature.
+                            </br>
+
+                            </p>
+                            </b>
+                            </br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </font>
+    </section>
+
+    <section id="Paper" class="sectionwhite">
+        <h3> Paper</h3>
+        <font size="normal">
+            <table cellpadding=0 cellspacing=0 width="100%" class="sectionwhite">
+                <tr>
+                    <td align="left">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/8786929" target="_blank">
+                            <img src="papers/AWHFL_Page1.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/8786929" target="_blank">
+                            <img src="papers/AWHFL_Page2.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/8786929" target="_blank">
+                            <img src="papers/AWHFL_Page3.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/8786929" target="_blank">
+                            <img src="papers/AWHFL_Page4.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/8786929" target="_blank">
+                            <img src="papers/AWHFL_Page5.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/8786929" target="_blank">
+                            <img src="papers/AWHFL_Page6.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/8786929" target="_blank">
+                            <img src="papers/AWHFL_Page7.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/8786929" target="_blank">
+                            <img src="papers/AWHFL_Page8.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/8786929" target="_blank">
+                            <img src="papers/AWHFL_Page9.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/8786929" target="_blank">
+                            <img src="papers/AWHFL_Page10.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/8786929" target="_blank">
+                            <img src="papers/AWHFL_Page11.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/8786929" target="_blank">
+                            <img src="papers/AWHFL_Page12.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/8786929" target="_blank">
+                            <img src="papers/AWHFL_Page13.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/8786929" target="_blank">
+                            <img src="papers/AWHFL_Page14.png" style="border:1px solid black" width="15.5%">
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/8786929" target="_blank">
+                            IEEE
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </font>
+    </section>
+
+    <hr />
+
+    <section id="TCYB2019" class="sectionwhite">
+        <tr>
+            <h2 style="text-align: center;">Visualization</h2>
+
+        </tr>
+
+
+        <h3>Evolution of the searching space as the algorithm proceeds</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/1.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Data preprocessing</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/2.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Proposed network</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/3.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Structures</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/4.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Loss weighting processes</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/5.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Network structure of ResNet</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/6.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Example images</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/7.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Comparison</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/8.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Example faces that are correctly recognized using the feature trained with the proposed feature loss</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/9.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Heat maps of the average feature maps of the deep networks trained with and without the proposed feature
+            loss</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/10.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Means and variances of the recognition rates of ten runs with the SoftMax and proposed feature losses</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/11.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Weight evolution of the alternative feature loss for ten-fold training on the Oulu-CASIA database</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/12.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+        <h3>Confusion matrix</h3>
+        <table cellpadding="3" cellspacing="0" width="100%" class="sectionwhite">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <img src="./vis/13.png" border="12" height="360">
+                    </td>
+                </tr>
+                <tr>
+        </table>
+
+
+    </section>
+
+    <section id="Citation" class="sectionwhite">
+        <h3> Citation</h3>
+    </section>
+    <section id="Citation" width="60%" class="sectiongray">
+        <table cellpadding=3 cellspacing=0 width="60%" class="sectiongray">
+            <tr>
+                <td>
+                    <pre><code>
+@article{xie2019adaptive,
+    title={Adaptive weighting of handcrafted feature losses for facial expression recognition},
+    author={Xie, Weicheng and Shen, Linlin and Duan, Jinming},
+    journal={IEEE transactions on cybernetics},
+    volume={51},
+    number={5},
+    pages={2787--2800},
+    year={2019},
+    publisher={IEEE}
+}                          
+            </td></tr>
+            </code></pre>
+        </table>
+    </section>
+
+
+    <br>访问次数:
+    <a href="https://www.easycounter.com/">
+        <img src="https://www.easycounter.com/counter.php?clims" border="0" alt="stats counter"></a>
+    <p></p>
+    <div class="page-header"> </div>
+    <div class="container span11">
+        <a href="https://clustrmaps.com/site/1bnro" title="Visit tracker"><img
+                src="//www.clustrmaps.com/map_v2.png?d=untOnR3Bc54Gi5oXc-hl3EGaWbwuvi_sOJi6_8HogZA&cl=ffffff" /></a>
+    </div>
+
+    </div>
+    <div class="page-header">
+    </div>
+
+</body>
+
+</html>
